@@ -1,0 +1,38 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Ult_Alloy_250221"
+config/description="An incremental game about mining and alloying"
+run/main_scene="res://Scenes/main.tscn"
+config/features=PackedStringArray("4.2", "Mobile")
+config/icon="res://icon.svg"
+
+[autoload]
+
+GlobalData="*res://Scripts/global_data.gd"
+
+[display]
+
+window/size/viewport_width=720
+window/size/viewport_height=1080
+window/size/resizable=false
+window/size/window_width_override=480
+window/size/window_height_override=720
+window/stretch/mode="canvas_items"
+
+[dotnet]
+
+project/assembly_name="Ult_Alloy_250221"
+
+[rendering]
+
+renderer/rendering_method="mobile"

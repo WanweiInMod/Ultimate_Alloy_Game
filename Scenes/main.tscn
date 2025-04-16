@@ -1,0 +1,85 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkvrgnwmagfct"]
+
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_m1ulx"]
+[ext_resource type="PackedScene" uid="uid://dnhff2isakqgc" path="res://Scenes/info_layer.tscn" id="1_r5cqc"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_m1ulx")
+test_bonus = 5
+
+[node name="MainCamera" type="Camera2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="InfoLayer" parent="." instance=ExtResource("1_r5cqc")]
+visible = false
+
+[node name="CenterContainer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -360.0
+offset_top = -540.0
+offset_right = 360.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="MiningClicker" type="Button" parent="CenterContainer"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+offset_left = 312.0
+offset_top = 492.0
+offset_right = 408.0
+offset_bottom = 588.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+text = "Click to 
+Mining"
+
+[node name="FurnaceButton" type="Button" parent="CenterContainer"]
+custom_minimum_size = Vector2(144, 80)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -208.0
+offset_top = -40.0
+offset_right = -64.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+text = "(0) Furnace
+Cost: stone * 10"
+
+[node name="MinerButton" type="Button" parent="CenterContainer"]
+custom_minimum_size = Vector2(96, 144)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -211.0
+offset_right = 48.0
+offset_bottom = -67.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+text = "(0) Miner
+Cost: 
+income
+* 150"
+
+[connection signal="pressed" from="CenterContainer/MiningClicker" to="." method="mining_click"]
+[connection signal="pressed" from="CenterContainer/FurnaceButton" to="." method="furnace_click"]
