@@ -21,6 +21,8 @@ func _ready():
 
 # 接收新数据，更新标签
 func resources_has_update() -> void:
+
+	# TODO 修改标签显示处理
 	var stone:int = global_data.get_resource_count(global_data.currencies, global_data.CURRENCIES.STONE)
 	currency_label.text = 'Stone: ' + str(stone)
 	pass
