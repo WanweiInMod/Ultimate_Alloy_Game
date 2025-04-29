@@ -1,21 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://btkybp6w2v5ho"]
+[gd_scene load_steps=3 format=3 uid="uid://btkybp6w2v5ho"]
 
-[sub_resource type="GDScript" id="GDScript_v3la5"]
-script/source = "extends CanvasLayer
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-"
+[ext_resource type="Script" path="res://Scripts/trading_dialog.gd" id="1_kb5uv"]
+[ext_resource type="PackedScene" uid="uid://dbisb58inqqup" path="res://Scenes/catalogue_info.tscn" id="2_aia33"]
 
 [node name="TradingDialog" type="CanvasLayer"]
-script = SubResource("GDScript_v3la5")
+layer = 2
+script = ExtResource("1_kb5uv")
 
 [node name="BasePanel" type="Panel" parent="."]
 custom_minimum_size = Vector2(700, 720)
@@ -62,22 +52,33 @@ metadata/_edit_lock_ = true
 
 [node name="RegularTrade" type="ScrollContainer" parent="BasePanel/TradeTab"]
 layout_mode = 2
+metadata/_edit_lock_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="BasePanel/TradeTab/RegularTrade"]
 custom_minimum_size = Vector2(640, 0)
 layout_mode = 2
 alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="CatalogueInfo" parent="BasePanel/TradeTab/RegularTrade/VBoxContainer" instance=ExtResource("2_aia33")]
+layout_mode = 2
 
 [node name="SpecialTrade" type="ScrollContainer" parent="BasePanel/TradeTab"]
 visible = false
 layout_mode = 2
+metadata/_edit_lock_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="BasePanel/TradeTab/SpecialTrade"]
 layout_mode = 2
+metadata/_edit_lock_ = true
 
 [node name="RoutineTrade" type="ScrollContainer" parent="BasePanel/TradeTab"]
 visible = false
 layout_mode = 2
+metadata/_edit_lock_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="BasePanel/TradeTab/RoutineTrade"]
 layout_mode = 2
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="BasePanel/ExitButton" to="." method="_on_exit_button_pressed"]

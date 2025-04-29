@@ -47,9 +47,13 @@ alignment = 1
 [node name="WarehouseButton" type="Button" parent="TopContainer"]
 custom_minimum_size = Vector2(96, 96)
 layout_mode = 2
+focus_mode = 0
 text = "Warehouse"
 
 [node name="SettingButton" type="Button" parent="TopContainer"]
 custom_minimum_size = Vector2(96, 96)
 layout_mode = 2
+focus_mode = 0
 text = "Setting"
+
+[connection signal="pressed" from="BottomContainer/TradeEntrance" to="." method="_on_trade_entrance_pressed"]

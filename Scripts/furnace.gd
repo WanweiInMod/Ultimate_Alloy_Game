@@ -56,6 +56,7 @@ func produce_resource():
 	for prod in range(0,prod_amount):
 		generate_resource()
 		pass
+	print('End of produce term:' + str(prod_amount))
 
 	# 获得当前设施数量并扣除相应材料，如材料不足则按消耗材料计算
 	var current_stone = global_data.get_resource_count(global_data.currencies,global_data.CURRENCIES.STONE)
@@ -65,6 +66,7 @@ func produce_resource():
 
 	#启动计时器
 	prod_timer.start()
+	print('Next term:' + str(prod_amount))
 
 	pass
 

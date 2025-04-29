@@ -6,7 +6,6 @@
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_m1ulx")
-test_bonus = 5
 
 [node name="MainCamera" type="Camera2D" parent="."]
 metadata/_edit_lock_ = true
