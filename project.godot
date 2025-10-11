@@ -11,21 +11,20 @@ config_version=5
 [application]
 
 config/name="Ult_Alloy_250221"
-config/description="An incremental game about mining and alloying"
-config/features=PackedStringArray("4.4", "Mobile")
+config/description="一个关于挖矿与合金的增量游戏
+An incremental game about mining and alloying"
+config/version="indev_0.0.1"
+run/main_scene="uid://b1c3d7htgmxdi"
+config/features=PackedStringArray("4.4", "C#", "Mobile")
 config/icon="res://icon.svg"
-
-[autoload]
-
-GlobalData="*res://Scripts/global_data.gd"
 
 [display]
 
 window/size/viewport_width=720
 window/size/viewport_height=1080
 window/size/resizable=false
-window/size/window_width_override=480
-window/size/window_height_override=720
+window/size/window_width_override=630
+window/size/window_height_override=945
 window/stretch/mode="viewport"
 
 [dotnet]

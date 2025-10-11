@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1c3d7htgmxdi"]
+
+[ext_resource type="PackedScene" uid="uid://bnjjqy82usgfr" path="res://Scenes/Levels/game_board_main.tscn" id="1_8gbba"]
+[ext_resource type="PackedScene" uid="uid://egtfyoyohfwo" path="res://Scenes/UIs/main_ui.tscn" id="2_jjvhh"]
+[ext_resource type="TileSet" uid="uid://56svaun5vo62" path="res://Assets/Tiles/placer_tile_rect.tres" id="3_kry3j"]
+
+[node name="Main" type="Node"]
+
+[node name="GameBoard" parent="." instance=ExtResource("1_8gbba")]
+
+[node name="MainUI" parent="." instance=ExtResource("2_jjvhh")]
+
+[node name="PlacerTile" type="TileMapLayer" parent="."]
+tile_set = ExtResource("3_kry3j")
