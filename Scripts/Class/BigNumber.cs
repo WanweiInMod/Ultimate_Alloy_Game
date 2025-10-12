@@ -314,61 +314,7 @@ public readonly struct BigNumber
     public static BigNumber FromParts(double mantissa, int exponent) => new BigNumber(mantissa, exponent);
 }
 
-// --- 使用范例 ---
-// 这部分是可选的，仅用于在 Godot 中演示/测试
-// 如果不需要，您可以将其删除或注释掉
-/*
-public partial class BigNumberTest : Node
-{
-    public override void _Ready()
-    {
-        // Example numbers
-        var smallNum = BigNumber.FromFloat(1234.567);
-        var mediumNum = new BigNumber(9.876, 6); // 9.876 million
-        var largeNum = new BigNumber(5.432, 30); // Way beyond common suffixes
-        var hugeNum = new BigNumber(1.23, 100);
 
-        GD.Print("--- Scientific Notation ---");
-        GD.Print(smallNum.ToScientificString(2));   // Output: 1.23e3
-        GD.Print(mediumNum.ToScientificString(2));  // Output: 9.88e6
-        GD.Print(largeNum.ToScientificString(2));   // Output: 5.43e30
-
-        GD.Print("\n--- Formatted String ---");
-        GD.Print(smallNum.ToFormattedString());     // Output: 1.23K
-        GD.Print(mediumNum.ToFormattedString());    // Output: 9.88M
-        GD.Print(largeNum.ToFormattedString());     // Output: 5.43e30 (falls back)
-
-        GD.Print("\n--- Engineering Notation ---");
-        GD.Print(smallNum.ToEngineeringString(2));  // Output: 1.23e3
-        GD.Print(mediumNum.ToEngineeringString(2)); // Output: 9.88e6
-        GD.Print(largeNum.ToEngineeringString(2));  // Output: 5.43e30
-
-        GD.Print("\n--- Mixed Engineering Notation (default) ---");
-        GD.Print(smallNum.ToMixedEngineeringString());  // Output: 1.23K
-        GD.Print(mediumNum.ToMixedEngineeringString()); // Output: 9.88M
-        GD.Print(largeNum.ToMixedEngineeringString());  // Output: 5.43e30
-        GD.Print(hugeNum.ToMixedEngineeringString());   // Output: 1.23e100
-
-        GD.Print("\n--- Mixed Engineering Notation (limited suffixes) ---");
-        // Pretend we only have prefixes up to 'M' (index 2)
-        GD.Print(smallNum.ToMixedEngineeringString(2));  // Output: 1.23K
-        GD.Print(mediumNum.ToMixedEngineeringString(2)); // Output: 9.88M
-        // Large num would normally use suffix beyond 'M', so it uses engineering
-        GD.Print(largeNum.ToMixedEngineeringString(2));  // Output: 5.43e30 
-
-        // Basic arithmetic
-        GD.Print("\n--- Arithmetic ---");
-        var sum = smallNum.Add(mediumNum);
-        GD.Print($"Sum: {sum.ToScientificString(2)}"); // ~9.88e6
-
-        var product = smallNum.Multiply(largeNum);
-        GD.Print($"Product: {product.ToScientificString(2)}"); // ~6.71e33
-
-        var quotient = largeNum.Divide(mediumNum);
-        GD.Print($"Quotient: {quotient.ToScientificString(2)}"); // ~5.50e23
-    }
-}
-*/
 
 
 
