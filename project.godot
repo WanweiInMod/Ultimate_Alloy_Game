@@ -18,6 +18,10 @@ run/main_scene="uid://b1c3d7htgmxdi"
 config/features=PackedStringArray("4.4", "C#", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GlobalData="*res://Scripts/Class/GlobalData.cs"
+
 [display]
 
 window/size/viewport_width=720

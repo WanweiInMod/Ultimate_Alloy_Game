@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnjjqy82usgfr"]
+
+[ext_resource type="Script" uid="uid://dl475q34lkorx" path="res://Scripts/level_main.gd" id="1_k5f0g"]
+
+[node name="GameBoard" type="Node2D"]
+script = ExtResource("1_k5f0g")
+
+[node name="ButtonMine" type="Button" parent="."]
+offset_left = 192.0
+offset_top = 800.0
+offset_right = 512.0
+offset_bottom = 928.0
+focus_mode = 0
+action_mode = 0
+text = "点击挖矿"
+
+[connection signal="pressed" from="ButtonMine" to="." method="_on_button_mine_pressed"]
