@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://1kpvkj0vkrfo"]
 
 [ext_resource type="Script" uid="uid://dcpdn6hlxb6w0" path="res://Scripts/info_ui.gd" id="1_krgsy"]
-[ext_resource type="Texture2D" uid="uid://d3oa4to545q7t" path="res://Assets/OreIcon/Icon4.png" id="1_rb7pl"]
+[ext_resource type="Texture2D" uid="uid://dla0qub8yuton" path="res://Assets/OreIcon/smallRocks.png" id="2_krgsy"]
 
 [node name="SampleInfo" type="Control"]
 custom_minimum_size = Vector2(128, 32)
@@ -21,7 +21,7 @@ offset_top = -16.0
 offset_right = 40.0
 offset_bottom = 16.0
 grow_vertical = 2
-texture = ExtResource("1_rb7pl")
+texture = ExtResource("2_krgsy")
 
 [node name="InfoCount" type="Label" parent="."]
 layout_mode = 1
@@ -37,3 +37,4 @@ offset_bottom = 11.5
 grow_horizontal = 0
 grow_vertical = 2
 text = "1.234e12"
+horizontal_alignment = 1
