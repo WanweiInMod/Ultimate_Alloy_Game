@@ -1,0 +1,16 @@
+{
+	"name": {
+		"name.achievement._": "[测试全局成就]",
+		"name.secret._": "[测试秘密成就]",
+		"name.sample._": ""
+	},
+	"description": {
+		"description.achievement._": "[测试全局成就]",
+		"description.secret._": "[测试秘密成就]",
+		"description.sample._": ""
+	},
+	"effect": {
+		"_": "",
+		"": ""
+	}
+}

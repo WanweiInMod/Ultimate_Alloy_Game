@@ -1,11 +1,46 @@
 {
  	"inventory":[
 		{
-			"id":"1_000_001",
-			"key":"stone",
-			"name":"name.item.stone",
-			"sort":"resource",
-			"description":"description.item.stone",
+			"id": "1_000_001",
+			"key": "stone",
+			"name": "name.item.stone",
+			"sort": "resource",
+			"description": "description.item.stone"
+		},
+		{
+			"id": "1_000_002",
+			"key": "copper",
+			"name": "name.item.copper",
+			"sort": "resource",
+			"description": "description.item.copper"
+		},
+		{
+			"id": "1_000_003",
+			"key": "iron",
+			"name": "name.item.iron",
+			"sort": "resource",
+			"description": "description.item.iron"
+		},
+		{
+			"id": "1_000_004",
+			"key": "gold",
+			"name": "name.item.gold",
+			"sort": "resource",
+			"description": "description.item.gold"
+		},
+		{
+			"id": "1_000_005",
+			"key": "silver",
+			"name": "name.item.silver",
+			"sort": "resource",
+			"description": "description.item.silver"
+		},
+		{
+			"id": "1_000_006",
+			"key": "cash",
+			"name": "name.item.cash",
+			"sort": "resource",
+			"description": "description.item.cash"
 		},
 		{}
 	],
@@ -44,7 +79,7 @@
 			],
 			"effect":[
 				{}
-			],
+			]
 		},
 		{}
 	],
@@ -59,7 +94,7 @@
 			],
 			"effect":[
 				{}
-			],
+			]
 		},
 		{}
 	],
@@ -74,7 +109,16 @@
 			],
 			"effect":[
 				{}
-			],
+			]
+		},
+		{}
+	],
+	"effect":[
+		{
+			"id":"400_001",
+			"key":"_",
+			"name":"name.effect._",
+			"description":"description.effect._"
 		},
 		{}
 	],

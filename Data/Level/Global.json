@@ -11,7 +11,7 @@
 			],
 			"effect":[
 				{}
-			],
+			]
 		},
         {
 			"id":"10_001",
@@ -24,7 +24,16 @@
 			],
 			"effect":[
 				{}
-			],
+			]
+		},
+		{}
+	],
+	"effect":[
+		{
+			"id":"10_001",
+			"key":"_",
+			"name":"name.effect._",
+			"description":"description.effect._"
 		},
 		{}
 	],
