@@ -46,40 +46,35 @@
 	],
 	"facilities":[
 		{
-			"id":"90_001",
-			"key":"furnace",
-			"name":"name.facility.furnace",
-			"description":"description.facility.furnace"
+			"id": "90_001",
+			"key": "furnace",
+			"name": "name.facility.furnace",
+			"type": "fixed",
+			"speed": "speed.facility.furnace",
+			"cost": "cost.facility.furnace",
+			"description": "description.facility.furnace"
 		},
 		{}
 	],
 	"trade":[
 		{
-			"id":"100_001",
-			"key":"first_trade",
-			"name":"name.trade.first_trade",
-			"description":"description.trade.first_trade",
-			"buy":[
-				{},{},{},{}
-			],
-			"reward":[
-				{}
-			]
+			"id": "100_001",
+			"key": "first_trade",
+			"name": "name.trade.first_trade",
+			"description": "description.trade.first_trade",
+			"order": "",
+			"reward": ""
 		},
 		{}
 	],
 	"research":[
 		{
-			"id":"200_001",
-			"key":"_",
-			"name":"name.research._",
-			"description":"description.research._",
-			"cost":[
-				{}
-			],
-			"effect":[
-				{}
-			]
+			"id": "200_001",
+			"key": "_",
+			"name": "name.research._",
+			"description": "description.research._",
+			"cost": "",
+			"effects": ""
 		},
 		{}
 	],
@@ -89,12 +84,8 @@
 			"key":"_",
 			"name":"name.operation._",
 			"description":"description.operation._",
-			"cost":[
-				{}
-			],
-			"effect":[
-				{}
-			]
+			"cost": "",
+			"effects": ""
 		},
 		{}
 	],
@@ -104,12 +95,8 @@
 			"key":"_",
 			"name":"name.achievement.main._",
 			"description":"description.achievement.main._",
-			"target":[
-				{}
-			],
-			"effect":[
-				{}
-			]
+			"targets":"",
+			"effects":""
 		},
 		{}
 	],
@@ -122,7 +109,7 @@
 		},
 		{}
 	],
-	"sample":[
+	"sample_struct":[
 		{
 			"id":"-1",
 			"key":"_",
@@ -130,5 +117,22 @@
 			"description":"description.sample._"
 		},
 		{}
-	]
+	],
+	
+	
+	"cost": {
+		
+	},
+	"order": {
+		
+	},
+	"reward": {
+		
+	},
+	"effects": {
+		
+	},
+	"targets": {
+		
+	}
 }
