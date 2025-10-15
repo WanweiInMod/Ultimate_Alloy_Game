@@ -5,11 +5,34 @@ public partial class GameManager : Node
 {
     // 
     [Signal] public delegate void UpdateInfoEventHandler();
-    
-    public void OnProduce(string itemType, int quantity)
+
+    private void OnActivate(string target)
     {
-        GlobalData.AddItem(itemType, quantity);
-        GD.Print($"Producing {quantity} of {itemType}");
-        EmitSignal(SignalName.UpdateInfo);
+        switch (target)
+        {
+            case "mine":
+                StoneProduced();
+                break;
+            case "furnace":
+                StoneExpend();
+                break;
+            default:
+                GD.PrintErr("UNKNOWN ACTIVATION");
+                break;
+        }
+    }
+
+    private void StoneProduced()
+    {
+        GlobalData.AddItem("stone",1);
+        EmitSignalUpdateInfo();
+        GD.Print("Stone has added");
+    }
+
+    private void StoneExpend()
+    {
+        GlobalData.AddItem("stone",-1);
+        EmitSignalUpdateInfo();
+        GD.Print("Stone has added");
     }
 }

@@ -47,3 +47,4 @@ focus_mode = 0
 text = "升级：采矿机"
 
 [connection signal="pressed" from="ButtonMine" to="." method="_on_button_mine_pressed"]
+[connection signal="pressed" from="ButtonFurnace" to="." method="_on_button_furnace_pressed"]

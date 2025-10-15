@@ -15,6 +15,7 @@ func _ready() -> void:
 
 func _update_info() -> void:
 	
+	print("Label Updating")
 	var info_test: int = global_data.GetItem('stone')  
 	update_info.emit(info_test)
 	

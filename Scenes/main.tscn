@@ -16,4 +16,4 @@ script = ExtResource("1_jjvhh")
 tile_set = ExtResource("3_kry3j")
 
 [connection signal="UpdateInfo" from="." to="MainUI" method="_update_info"]
-[connection signal="produce" from="GameBoard" to="." method="OnProduce"]
+[connection signal="activate" from="GameBoard" to="." method="OnActivate"]

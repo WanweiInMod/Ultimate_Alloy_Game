@@ -20,7 +20,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-GlobalData="*res://Scripts/Class/GlobalData.cs"
+GlobalData="*res://Scripts/GlobalData.cs"
 
 [display]
 

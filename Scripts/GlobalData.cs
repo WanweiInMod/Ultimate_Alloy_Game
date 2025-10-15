@@ -6,48 +6,49 @@ using System.Text.Json;
 public partial class GlobalData : Node
 {
     // 资源数据
-    public static Dictionary<string, int> Items = new Dictionary<string, int>();
+    private static Dictionary<string, int> _items = new Dictionary<string, int>()
+    {
+        {"stone",0},
+        {"cash",0},
+        {"copper",0},
+        {"iron",0},
+        {"silver",0},
+        {"gold",0}
+    };
     
     // 设施数据
-    public static Dictionary<string, int> Facilities = new Dictionary<string, int>();
-
-
-    public override void _Ready()
+    private static Dictionary<string, int> Facilities = new Dictionary<string, int>()
     {
-        LoadDataFromJson();
-    }
-    
-    // —————— 配置文件读取函数 ——————
-    private void LoadDataFromJson()
-    {
-        using var file = FileAccess.Open("res://Data/Level/Main.json", FileAccess.ModeFlags.Read);
-    }
+        {"furnace",0},
+        {"miner",0}
+    };
 
     // —————— 资源管理函数 ——————
-    public static void AddItem(string _itemName, int _amount)
+    public static void AddItem(string itemName, int amount)
     {
-        if (Items.ContainsKey(_itemName))
+        if (_items.ContainsKey(itemName))
         {
-            Items[_itemName] += _amount;
+            _items[itemName] += amount;
+            GD.Print($"{amount.ToString()} {itemName} added.");
         }
         else
         {
-            GD.PrintErr($"Item {_itemName} not found in inventory.");
+            GD.PrintErr($"Item {itemName} not found in inventory.");
             return;
         }
 
-        GD.Print($"{_amount} of {_itemName} added to inventory.");
+        GD.Print($"{amount} of {itemName} added to inventory.");
     }
 
-    public static int GetItem(string _itemName)
+    public static int GetItem(string itemName)
     {
-        if (Items.ContainsKey(_itemName))
+        if (_items.ContainsKey(itemName))
         {
-            return Items[_itemName];
+            return _items[itemName];
         }
         else
         {
-            GD.PrintErr($"Item {_itemName} not found in inventory.");
+            GD.PrintErr($"Item {itemName} not found in inventory.");
             return 0;
         }
     }
