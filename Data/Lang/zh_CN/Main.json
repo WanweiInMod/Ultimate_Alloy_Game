@@ -6,13 +6,19 @@
         "name.item.gold":"金锭",
         "name.item.silver":"银锭",
         "name.item.cash":"资金",
+		
         "name.facility.furnace":"熔炉",
+		"name.facilities.miner":"矿工",
+		
         "name.trade.first_trade":"第一次交易",
+		
         "name.research._":"[研究项]",
+		
         "name.operation._":"[行动项]",
-        "name.achievement.main._":"[测试成就]",
-        "name.sample._":""
+		
+        "name.achievement.main._":"[测试成就]"
     },
+	
     "description": {
         "description.item.stone": "最基本的采矿资源",
         "description.item.copper": "通过熔炼获得",
@@ -20,13 +26,20 @@
         "description.item.gold": "通过熔炼获得",
         "description.item.silver": "通过熔炼获得",
         "description.item.cash": "通过交易获得",
-        "description.facility.furnace": "熔炉设施，熔炼矿物",
+		
+        "description.facility.furnace": "消耗石头，概率熔炼出矿物",
+		"description.facility.miner": "采集更多的石头",
+		
         "description.trade.first_trade": "获得第一桶金",
+		
         "description.research._": "[测试描述]",
+		
         "description.operation._": "[测试描述]",
+		
         "description.achievement.main._": "[测试描述]",
-        "description.effect._": "[测试描述]",
-        "description.sample._": ""
+		
+        "description.effect._": "[测试描述]"
+		
     },
     "effect": {
 		"_": "",

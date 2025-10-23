@@ -1,138 +1,119 @@
 {
- 	"inventory":[
+ 	"item":[
 		{
-			"id": "1_000_001",
-			"key": "stone",
+			"key": "item.stone",
 			"name": "name.item.stone",
 			"sort": "resource",
 			"description": "description.item.stone"
 		},
 		{
-			"id": "1_000_002",
-			"key": "copper",
+			"key": "item.copper",
 			"name": "name.item.copper",
 			"sort": "resource",
 			"description": "description.item.copper"
 		},
 		{
-			"id": "1_000_003",
-			"key": "iron",
+			"key": "item.iron",
 			"name": "name.item.iron",
 			"sort": "resource",
 			"description": "description.item.iron"
 		},
 		{
-			"id": "1_000_004",
-			"key": "gold",
+			"key": "item.gold",
 			"name": "name.item.gold",
 			"sort": "resource",
 			"description": "description.item.gold"
 		},
 		{
-			"id": "1_000_005",
-			"key": "silver",
+			"key": "item.silver",
 			"name": "name.item.silver",
 			"sort": "resource",
 			"description": "description.item.silver"
 		},
 		{
-			"id": "1_000_006",
-			"key": "cash",
+			"key": "item.cash",
 			"name": "name.item.cash",
 			"sort": "resource",
 			"description": "description.item.cash"
-		},
-		{}
+		}
 	],
 	"facilities":[
 		{
-			"id": "90_001",
-			"key": "furnace",
+			"key": "facilities.furnace",
 			"name": "name.facility.furnace",
-			"type": "fixed",
-			"speed": "speed.facility.furnace",
+			"type": "count",
+			"speed": 10,
 			"cost": "cost.facility.furnace",
 			"description": "description.facility.furnace"
 		},
-		{}
+		{
+			"key": "facilities.miner",
+			"name": "name.facility.miner",
+			"type": "level",
+			"speed": 0.1,
+			"cost": "cost.facility.miner",
+			"description": "description.facility.miner"
+		}
 	],
 	"trade":[
 		{
-			"id": "100_001",
-			"key": "first_trade",
+			"key": "trade.first_trade",
 			"name": "name.trade.first_trade",
 			"description": "description.trade.first_trade",
 			"order": "",
 			"reward": ""
-		},
-		{}
+		}
 	],
 	"research":[
 		{
-			"id": "200_001",
-			"key": "_",
+			"key": "research._",
 			"name": "name.research._",
 			"description": "description.research._",
 			"cost": "",
 			"effects": ""
-		},
-		{}
+		}
 	],
 	"operation":[
 		{
-			"id":"250_001",
-			"key":"_",
+			"key": "operation._",
 			"name":"name.operation._",
 			"description":"description.operation._",
 			"cost": "",
-			"effects": ""
-		},
-		{}
+			"effects": "",
+			"cooldown": 15
+		}
 	],
 	"achievement":[
 		{
-			"id":"300_001",
-			"key":"_",
+			"key": "achievement._",
 			"name":"name.achievement.main._",
 			"description":"description.achievement.main._",
 			"targets":"",
 			"effects":""
-		},
-		{}
+		}
 	],
 	"effect":[
 		{
-			"id":"400_001",
-			"key":"_",
+			"key": "effect._",
 			"name":"name.effect._",
 			"description":"description.effect._"
-		},
-		{}
-	],
-	"sample_struct":[
-		{
-			"id":"-1",
-			"key":"_",
-			"name":"name.sample._",
-			"description":"description.sample._"
-		},
-		{}
+		}
 	],
 	
 	
-	"cost": {
+	"cost": [
 		
-	},
-	"order": {
+	],
+	"order": [
 		
-	},
-	"reward": {
+	],
+	"reward": [
 		
-	},
-	"effects": {
+	],
+	"effects": [
 		
-	},
-	"targets": {
+	],
+	"targets": [
 		
-	}
+	]
 }
