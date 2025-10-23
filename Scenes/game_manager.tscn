@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1c3d7htgmxdi"]
+
+[ext_resource type="Script" uid="uid://dldr66jx1uv18" path="res://Scripts/GameManager.cs" id="1_sq00h"]
+[ext_resource type="PackedScene" uid="uid://bnjjqy82usgfr" path="res://Scenes/level_manager.tscn" id="2_mmt5l"]
+[ext_resource type="PackedScene" uid="uid://egtfyoyohfwo" path="res://Scenes/UIs/main_ui.tscn" id="3_fgdfb"]
+
+[node name="GameManager" type="Node"]
+script = ExtResource("1_sq00h")
+
+[node name="LevelManager" parent="." instance=ExtResource("2_mmt5l")]
+
+[node name="MainUI" parent="." instance=ExtResource("3_fgdfb")]
+
+[connection signal="UpdateInfo" from="." to="MainUI" method="_update_info"]
+[connection signal="activate" from="LevelManager" to="." method="OnActivate"]
