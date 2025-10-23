@@ -1,11 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://bnjjqy82usgfr"]
+[gd_scene load_steps=2 format=3 uid="uid://brv1pn21k12kw"]
 
-[ext_resource type="Script" uid="uid://dl475q34lkorx" path="res://Scripts/level_main.gd" id="1_k5f0g"]
+[ext_resource type="Script" uid="uid://dvk5u5o67xro0" path="res://Scripts/Levels/level_main.gd" id="1_k5f0g"]
 
-[node name="GameBoard" type="Node2D"]
+[node name="LevelMain" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 720.0
+offset_bottom = 1080.0
 script = ExtResource("1_k5f0g")
 
 [node name="ButtonMine" type="Button" parent="."]
+layout_mode = 0
 offset_left = 200.0
 offset_top = 800.0
 offset_right = 520.0
@@ -15,6 +20,7 @@ action_mode = 0
 text = "点击挖矿"
 
 [node name="ButtonFurnace" type="Button" parent="."]
+layout_mode = 0
 offset_left = 40.0
 offset_top = 672.0
 offset_right = 344.0
@@ -23,6 +29,7 @@ focus_mode = 0
 text = "建造：熔炉"
 
 [node name="ButtonMiner" type="Button" parent="."]
+layout_mode = 0
 offset_left = 376.0
 offset_top = 672.0
 offset_right = 680.0
@@ -31,6 +38,7 @@ focus_mode = 0
 text = "招募：矿工"
 
 [node name="ButtonBlast" type="Button" parent="."]
+layout_mode = 0
 offset_left = 40.0
 offset_top = 544.0
 offset_right = 344.0
@@ -39,12 +47,10 @@ focus_mode = 0
 text = "建造：高炉"
 
 [node name="ButtonMachine" type="Button" parent="."]
+layout_mode = 0
 offset_left = 376.0
 offset_top = 544.0
 offset_right = 680.0
 offset_bottom = 640.0
 focus_mode = 0
 text = "升级：采矿机"
-
-[connection signal="pressed" from="ButtonMine" to="." method="_on_button_mine_pressed"]
-[connection signal="pressed" from="ButtonFurnace" to="." method="_on_button_furnace_pressed"]
