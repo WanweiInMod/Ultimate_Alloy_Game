@@ -94,5 +94,3 @@ alignment = 1
 [node name="SampleFunction" parent="PanelBottom/FuncContainer" instance=ExtResource("2_kqhp1")]
 layout_mode = 2
 size_flags_vertical = 0
-
-[connection signal="update_info" from="." to="PanelTop/InfoContainer/SampleInfo" method="_on_update_info"]

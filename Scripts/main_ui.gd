@@ -2,13 +2,13 @@ extends CanvasLayer
 
 signal update_info(count:int)
 
-var info_label: 	Control
-var global_data: 	Node
+@onready var global_data: Node = get_node("/root/GlobalData")
+
+const MAX_INFO_LABEL_COUNT : int = 6
+var info_label_list : Array[InfoUi]
+var info_item_textures : Array[Texture2D] 
 
 func _ready() -> void:
-	
-	global_data = get_node("/root/GlobalData")
-	info_label = $PanelTop/InfoContainer/SampleInfo
 	
 	return
 
