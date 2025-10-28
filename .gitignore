@@ -5,6 +5,3 @@
 # 素材解压文件夹
 AssetsUnzip/
 
-# Godot自动生成文件
-*.uid
-*.import
