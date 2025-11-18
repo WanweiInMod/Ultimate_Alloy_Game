@@ -12,4 +12,3 @@ script = ExtResource("1_sq00h")
 [node name="MainUI" parent="." instance=ExtResource("3_fgdfb")]
 
 [connection signal="UpdateInfo" from="." to="MainUI" method="_update_info"]
-[connection signal="activate" from="LevelManager" to="." method="OnActivate"]
