@@ -8,6 +8,10 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="Ult_Alloy_250221"
@@ -15,12 +19,8 @@ config/description="一个关于挖矿与合金的增量游戏
 An incremental game about mining and alloying"
 config/version="indev_0.0.1"
 run/main_scene="uid://b1c3d7htgmxdi"
-config/features=PackedStringArray("4.4", "Mobile")
+config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
-
-[autoload]
-
-GlobalData="*res://Scripts/GlobalData.cs"
 
 [display]
 
