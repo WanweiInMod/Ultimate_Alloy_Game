@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cebv3ffexwb4v"]
+
+[ext_resource type="Texture2D" uid="uid://cbot0pdh74xt3" path="res://icon.svg" id="1_gme1s"]
+[ext_resource type="Script" uid="uid://dhv335ovqs0ql" path="res://info_label.gd" id="1_nrcqi"]
+
+[node name="InfoLabel" type="HBoxContainer" unique_id=1706656180]
+custom_minimum_size = Vector2(108, 0)
+alignment = 1
+script = ExtResource("1_nrcqi")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=353750679]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+mouse_filter = 2
+texture = ExtResource("1_gme1s")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="." unique_id=533625794]
+custom_minimum_size = Vector2(72, 0)
+layout_mode = 2
+text = "123.4e12"
+horizontal_alignment = 1

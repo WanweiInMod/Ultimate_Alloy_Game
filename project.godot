@@ -18,7 +18,7 @@ config/name="Ult_Alloy_250221"
 config/description="一个关于挖矿与合金的增量游戏
 An incremental game about mining and alloying"
 config/version="indev_0.0.1"
-run/main_scene="uid://b1c3d7htgmxdi"
+run/main_scene="uid://ckh2hxnklh2dc"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
