@@ -1,7 +1,27 @@
 [gd_scene format=3 uid="uid://ckh2hxnklh2dc"]
 
+[ext_resource type="Script" uid="uid://b8oro2w201pmp" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://bxdrogl3q6wyb" path="res://ui.tscn" id="1_ig7tw"]
 
 [node name="Main" type="Node" unique_id=300201737]
+script = ExtResource("1_0xm2m")
 
 [node name="UI" parent="." unique_id=1530547122 instance=ExtResource("1_ig7tw")]
+
+[node name="Button" type="Button" parent="." unique_id=236110025]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -60.0
+offset_right = 60.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Click
+to
+Mine"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

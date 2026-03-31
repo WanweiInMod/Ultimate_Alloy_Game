@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bxdrogl3q6wyb"]
 
 [ext_resource type="PackedScene" uid="uid://cebv3ffexwb4v" path="res://info_label.tscn" id="1_fyqef"]
+[ext_resource type="Script" uid="uid://dy38j7x7p8owr" path="res://ui.gd" id="1_m6e0p"]
 
 [node name="UI" type="Control" unique_id=1530547122]
 layout_mode = 3
@@ -9,8 +10,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_m6e0p")
 
-[node name="Top Panel" type="Panel" parent="." unique_id=663937504]
+[node name="TopPanel" type="Panel" parent="." unique_id=663937504]
 custom_minimum_size = Vector2(480, 120)
 layout_mode = 1
 anchors_preset = 5
@@ -22,7 +24,7 @@ offset_right = 240.0
 offset_bottom = 160.0
 grow_horizontal = 2
 
-[node name="Button" type="Button" parent="Top Panel" unique_id=480341603]
+[node name="Button" type="Button" parent="TopPanel" unique_id=480341603]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -30,7 +32,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="InfoContainer" type="HFlowContainer" parent="Top Panel" unique_id=100844591]
+[node name="InfoContainer" type="HFlowContainer" parent="TopPanel" unique_id=100844591]
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 1
 anchors_preset = 8
@@ -45,11 +47,11 @@ theme_override_constants/h_separation = 30
 alignment = 1
 last_wrap_alignment = 2
 
-[node name="InfoLabel" parent="Top Panel/InfoContainer" unique_id=1706656180 instance=ExtResource("1_fyqef")]
+[node name="InfoLabel" parent="TopPanel/InfoContainer" unique_id=1706656180 instance=ExtResource("1_fyqef")]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="Bottom Panel" type="Panel" parent="." unique_id=1160215843]
+[node name="BottomPanel" type="Panel" parent="." unique_id=1160215843]
 custom_minimum_size = Vector2(0, 120)
 layout_mode = 1
 anchors_preset = 12
