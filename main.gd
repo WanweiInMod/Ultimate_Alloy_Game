@@ -1,11 +1,12 @@
 extends Node
 
 
-@onready var game_ui = $UI
+@export var game_ui: Control
 
-var count_of_res = 0
+@onready var global_storage: Node = GlobalStorage
 
 func _on_button_pressed() -> void:
-	count_of_res += 1
-	game_ui.update_ui(count_of_res)
+
+	global_storage.Stones += 1
+	game_ui.update_ui(global_storage.Stones)
 	pass # Replace with function body.

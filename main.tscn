@@ -3,8 +3,9 @@
 [ext_resource type="Script" uid="uid://b8oro2w201pmp" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://bxdrogl3q6wyb" path="res://ui.tscn" id="1_ig7tw"]
 
-[node name="Main" type="Node" unique_id=300201737]
+[node name="Main" type="Node" unique_id=300201737 node_paths=PackedStringArray("game_ui")]
 script = ExtResource("1_0xm2m")
+game_ui = NodePath("UI")
 
 [node name="UI" parent="." unique_id=1530547122 instance=ExtResource("1_ig7tw")]
 
