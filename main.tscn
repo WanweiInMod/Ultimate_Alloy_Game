@@ -2,14 +2,16 @@
 
 [ext_resource type="Script" uid="uid://b8oro2w201pmp" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://bxdrogl3q6wyb" path="res://ui.tscn" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://w3j2867eos4o" path="res://furnace_manager.gd" id="3_h2yge"]
 
-[node name="Main" type="Node" unique_id=300201737 node_paths=PackedStringArray("game_ui")]
+[node name="Main" type="Node" unique_id=300201737 node_paths=PackedStringArray("ui_mng", "furnace_mng")]
 script = ExtResource("1_0xm2m")
-game_ui = NodePath("UI")
+ui_mng = NodePath("UI")
+furnace_mng = NodePath("FurnaceManager")
 
 [node name="UI" parent="." unique_id=1530547122 instance=ExtResource("1_ig7tw")]
 
-[node name="Button" type="Button" parent="." unique_id=236110025]
+[node name="MiningButton" type="Button" parent="." unique_id=236110025]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -25,4 +27,26 @@ text = "Click
 to
 Mine"
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="FurnaceManager" type="Node" parent="." unique_id=1495262546]
+script = ExtResource("3_h2yge")
+
+[node name="FurnaceBuyButton" type="Button" parent="FurnaceManager" unique_id=1031219094]
+custom_minimum_size = Vector2(180, 120)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -270.0
+offset_top = -60.0
+offset_right = -90.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Click to buy
+Furnace
+count: 0
+cost: 10 stones"
+
+[connection signal="pressed" from="MiningButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="FurnaceManager/FurnaceBuyButton" to="FurnaceManager" method="_on_furnace_buy_button_pressed"]
