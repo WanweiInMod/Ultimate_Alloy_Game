@@ -1,12 +1,13 @@
 using Godot;
+using Godot.Collections;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 public partial class GlobalStorage : Node
 {
     [Signal] public delegate void StorageUpdatedEventHandler(StringName resType, float value);
 
-    // 将 Dictionary 的键类型改为 StringName，与方法参数保持一致
     public Dictionary<StringName, float> Storage = new()
     {
         { "Stone", 0 },
@@ -71,6 +72,11 @@ public partial class GlobalStorage : Node
         {
             GD.PrintErr($"Resource type '{resType}' already exists.");
         }
+    }
+
+    public Array<StringName> GetStorageKeys()
+    {
+        return new Array<StringName>(Storage.Keys.ToArray());
     }
 }
 
