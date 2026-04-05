@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cebv3ffexwb4v" path="res://info_label.tscn" id="1_fyqef"]
 [ext_resource type="Script" uid="uid://dy38j7x7p8owr" path="res://ui.gd" id="1_m6e0p"]
 
-[node name="UI" type="Control" unique_id=1530547122]
+[node name="UI" type="Control" unique_id=1530547122 node_paths=PackedStringArray("label_container")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,6 +11,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_m6e0p")
+label_container = NodePath("TopPanel/InfoContainer")
 
 [node name="TopPanel" type="Panel" parent="." unique_id=663937504]
 custom_minimum_size = Vector2(480, 120)

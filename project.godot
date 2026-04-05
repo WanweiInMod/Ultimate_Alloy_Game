@@ -24,7 +24,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-GlobalStorage="*uid://byyfkutyrcol6"
+GlobalStorage_Legacy="uid://byyfkutyrcol6"
+GlobalStorage="*uid://b8jeocc0ou63y"
 
 [display]
 
@@ -38,6 +39,10 @@ window/stretch/mode="canvas_items"
 [dotnet]
 
 project/assembly_name="Ult_Alloy_250221"
+
+[global_group]
+
+ItemLabel=""
 
 [godots]
 

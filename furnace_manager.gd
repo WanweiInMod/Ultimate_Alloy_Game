@@ -8,7 +8,7 @@ signal timer_activate
 @onready var global_storage: GlobalStorage = GlobalStorage
 
 var furnace_timer: Timer
-var furnace_count: int = 0
+var furnace_count: int = 0	#TODO 分离至单独的功能脚本中
 
 
 func _ready():
@@ -49,6 +49,7 @@ func storage_check(_res_type = "", _value = null):
 	_update_buy_info()
 	pass
 
+#TODO 拆分至其他脚本
 func produce_copper():
 	print("Time to Produce copper!")
 	global_storage.AddStorage("Copper",furnace_count)
