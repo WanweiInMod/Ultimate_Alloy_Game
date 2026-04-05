@@ -1,15 +1,16 @@
 extends HBoxContainer
-class_name InfoLabel
 
 
-@onready var label := $Label
+@onready var text_label := $Label
+var storage_item := "Stone"
+var is_disabled := false
 
 
 func _ready() -> void:
-	label.text = "0"
+	text_label.text = "0"
 	pass
 
 
 func update_text(count: int) -> void:
-	label.text = str(count)
+	text_label.text = str(count)
 	pass

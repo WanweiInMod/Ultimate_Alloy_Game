@@ -5,7 +5,7 @@ signal timer_activate
 
 
 @onready var furnace_buy_button: Button = $FurnaceBuyButton
-@onready var global_storage: Node = GlobalStorage
+@onready var global_storage: GlobalStorage = GlobalStorage
 
 var furnace_timer: Timer
 var furnace_count: int = 0
@@ -50,8 +50,9 @@ func storage_check(_res_type = "", _value = null):
 	pass
 
 func produce_copper():
-	print("Time to Produce 1 copper!")
-	#TODO: add producing methods 
+	print("Time to Produce copper!")
+	global_storage.AddStorage("Copper",furnace_count)
+	print("Current copper:" + str(global_storage.GetStorage("Copper")))
 	pass
 
 func _update_buy_info():

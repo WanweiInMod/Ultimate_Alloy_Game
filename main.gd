@@ -4,7 +4,7 @@ extends Node
 @export var ui_mng: Node
 @export var furnace_mng: Node
 
-@onready var global_storage: Node = GlobalStorage
+@onready var global_storage: GlobalStorage = GlobalStorage
 
 
 func _ready():
