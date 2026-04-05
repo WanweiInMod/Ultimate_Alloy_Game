@@ -43,8 +43,7 @@ offset_right = -90.0
 offset_bottom = 60.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Click to buy
-Furnace
+text = "Buy furnace
 count: 0
 cost: 10 stones"
 
