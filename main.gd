@@ -14,5 +14,4 @@ func _ready():
 func _on_button_pressed() -> void:
 	#TODO 产出机制链接其他脚本
 	global_storage.add_storage("Stone",1)
-	print("Current stones: " + str(global_storage.get_storage("Stone")))
 	pass

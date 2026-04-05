@@ -57,5 +57,5 @@ func produce_copper():
 	pass
 
 func _update_buy_info():
-	furnace_buy_button.text = "Click to buy \n Furnace \n count:" + str(furnace_count) + "/10 \ncost: 10 stones"
+	furnace_buy_button.text = "Buy furnace \n count:" + str(furnace_count) + "/10 \ncost: 10 stones"
 	pass
