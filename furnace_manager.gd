@@ -40,6 +40,7 @@ func _furnace_timer_activate():
 	if furnace_count != 0:
 		furnace_timer.start(10.0)
 		print("Furnace timer has start!")
+		#TODO 添加产出倒计时图形指示器
 		timer_activate.disconnect(_furnace_timer_activate)
 	pass
 
@@ -51,9 +52,7 @@ func storage_check(_res_type = "", _value = null):
 
 #TODO 拆分至其他脚本
 func produce_copper():
-	print("Time to Produce copper!")
 	global_storage.add_storage("Copper",furnace_count)
-	print("Current copper:" + str(global_storage.get_storage("Copper")))
 	pass
 
 func _update_buy_info():
