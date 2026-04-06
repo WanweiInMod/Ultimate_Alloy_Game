@@ -10,6 +10,13 @@ signal timer_activate
 var furnace_timer: Timer
 var furnace_count: int = 0	#TODO 分离至单独的功能脚本中
 
+var can_produce: Dictionary[StringName,float] = {
+	"Copper" : 0 ,
+	"Iron" : 0,
+	"Silver" : 0,
+	"Gold" : 0,
+}
+
 
 func _ready():
 
@@ -21,7 +28,7 @@ func _ready():
 
 	furnace_timer = Timer.new()
 	furnace_timer.timeout.connect(storage_check)
-	furnace_timer.timeout.connect(produce_copper)
+	furnace_timer.timeout.connect(produce_sources)
 	add_child(furnace_timer)
 	furnace_timer.owner = self
 
@@ -51,8 +58,21 @@ func storage_check(_res_type = "", _value = null):
 	pass
 
 #TODO 拆分至其他脚本
-func produce_copper():
-	global_storage.add_storage("Copper",furnace_count)
+func produce_sources():
+	var can_produce_resources: Dictionary[StringName, float] = can_produce.duplicate()
+
+	for prod_i in range(furnace_count):
+		var which_produce: StringName = can_produce_resources.keys()[randi_range(0,can_produce_resources.size() - 1)]
+		can_produce_resources[which_produce] += 1.0
+		pass
+
+	for add_i in can_produce_resources:
+		var how_much_produce := can_produce_resources[add_i]
+		if how_much_produce == 0 : continue
+		global_storage.add_storage(add_i, can_produce_resources[add_i])
+		print("Furnace produced" + str(can_produce_resources[add_i]) +" of "+ add_i)
+		pass
+	
 	pass
 
 func _update_buy_info():
