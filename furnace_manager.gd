@@ -4,9 +4,11 @@ extends Node
 signal timer_activate
 
 
-@onready var furnace_buy_button: Button = $FurnaceBuyButton
+@export var furnace_buy_button: Button
+@export var producing_timer: TextureProgressBar
 @onready var global_storage := GlobalStorage
 
+@export var furnace_timer_dur: float = 10
 var furnace_timer: Timer
 var furnace_count: int = 0	#TODO 分离至单独的功能脚本中
 
@@ -20,6 +22,9 @@ var can_produce: Dictionary[StringName,float] = {
 
 func _ready():
 
+	furnace_buy_button.pressed.connect(_on_furnace_buy_button_pressed)
+	furnace_buy_button.disabled = true
+
 	global_storage.connect("StorageUpdated", storage_check)
 
 	timer_activate.connect(_furnace_timer_activate)
@@ -32,8 +37,13 @@ func _ready():
 	add_child(furnace_timer)
 	furnace_timer.owner = self
 
-	furnace_buy_button.disabled = true
+	producing_timer.value = 100
+	producing_timer.hide()
 
+	pass
+
+func _process(_delta):
+	_update_texture_timer()
 	pass
 
 func _on_furnace_buy_button_pressed() -> void:
@@ -45,9 +55,9 @@ func _on_furnace_buy_button_pressed() -> void:
 
 func _furnace_timer_activate():
 	if furnace_count != 0:
-		furnace_timer.start(10.0)
+		furnace_timer.start(furnace_timer_dur)
 		print("Furnace timer has start!")
-		#TODO 添加产出倒计时图形指示器
+		producing_timer.show()
 		timer_activate.disconnect(_furnace_timer_activate)
 	pass
 
@@ -57,7 +67,7 @@ func storage_check(_res_type = "", _value = null):
 	_update_buy_info()
 	pass
 
-#TODO 拆分至其他脚本
+#TODO 细化各个产物的产出概率
 func produce_sources():
 	var can_produce_resources: Dictionary[StringName, float] = can_produce.duplicate()
 
@@ -70,11 +80,17 @@ func produce_sources():
 		var how_much_produce := can_produce_resources[add_i]
 		if how_much_produce == 0 : continue
 		global_storage.add_storage(add_i, can_produce_resources[add_i])
-		print("Furnace produced" + str(can_produce_resources[add_i]) +" of "+ add_i)
+		print("Furnace produced " + str(can_produce_resources[add_i]) +" of "+ add_i)
 		pass
 	
 	pass
 
 func _update_buy_info():
 	furnace_buy_button.text = "Buy furnace \n count:" + str(furnace_count) + "/10 \ncost: 10 stones"
+	pass
+
+func _update_texture_timer():
+	if !producing_timer.is_visible_in_tree(): return
+	if furnace_timer.is_stopped(): return
+	producing_timer.value = (furnace_timer.time_left/furnace_timer_dur) * producing_timer.max_value
 	pass

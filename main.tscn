@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://b8oro2w201pmp" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://bxdrogl3q6wyb" path="res://ui.tscn" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://w3j2867eos4o" path="res://furnace_manager.gd" id="3_h2yge"]
+[ext_resource type="Texture2D" uid="uid://cbot0pdh74xt3" path="res://icon.svg" id="4_1bvp3"]
+[ext_resource type="Script" uid="uid://cjg5ufv1vqpuq" path="res://seller_manager.gd" id="5_lquwl"]
 
 [node name="Main" type="Node" unique_id=300201737 node_paths=PackedStringArray("ui_mng", "furnace_mng")]
 script = ExtResource("1_0xm2m")
@@ -27,8 +29,10 @@ text = "Click
 to
 Mine"
 
-[node name="FurnaceManager" type="Node" parent="." unique_id=1495262546]
+[node name="FurnaceManager" type="Node" parent="." unique_id=1495262546 node_paths=PackedStringArray("furnace_buy_button", "producing_timer")]
 script = ExtResource("3_h2yge")
+furnace_buy_button = NodePath("FurnaceBuyButton")
+producing_timer = NodePath("FurnaceBuyButton/ProducingTimer")
 
 [node name="FurnaceBuyButton" type="Button" parent="FurnaceManager" unique_id=1031219094]
 custom_minimum_size = Vector2(180, 120)
@@ -47,5 +51,94 @@ text = "Buy furnace
 count: 0
 cost: 10 stones"
 
+[node name="ProducingTimer" type="TextureProgressBar" parent="FurnaceManager/FurnaceBuyButton" unique_id=1656369493]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -22.0
+offset_bottom = 106.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+value = 80.0
+fill_mode = 5
+texture_progress = ExtResource("4_1bvp3")
+
+[node name="SellerManager" type="Node" parent="." unique_id=996169128 node_paths=PackedStringArray("sell_copper", "sell_iron", "sell_silver", "sell_gold")]
+script = ExtResource("5_lquwl")
+sell_copper = NodePath("Button")
+sell_iron = NodePath("Button2")
+sell_silver = NodePath("Button3")
+sell_gold = NodePath("Button4")
+
+[node name="Button" type="Button" parent="SellerManager" unique_id=1718889658]
+custom_minimum_size = Vector2(120, 120)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = 100.0
+offset_right = -180.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Sell
+Copper"
+
+[node name="Button2" type="Button" parent="SellerManager" unique_id=1834356367]
+custom_minimum_size = Vector2(120, 120)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -140.0
+offset_top = 100.0
+offset_right = -20.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Sell
+Iron"
+
+[node name="Button3" type="Button" parent="SellerManager" unique_id=1315704286]
+custom_minimum_size = Vector2(120, 120)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 20.0
+offset_top = 100.0
+offset_right = 140.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Sell
+Silver
+"
+
+[node name="Button4" type="Button" parent="SellerManager" unique_id=1671091733]
+custom_minimum_size = Vector2(120, 120)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 180.0
+offset_top = 100.0
+offset_right = 300.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Sell
+Gold
+"
+
 [connection signal="pressed" from="MiningButton" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="FurnaceManager/FurnaceBuyButton" to="FurnaceManager" method="_on_furnace_buy_button_pressed"]
