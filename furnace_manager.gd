@@ -12,6 +12,7 @@ signal timer_activate
 var furnace_timer: Timer
 var furnace_count: int = 0	#TODO 分离至单独的功能脚本中
 
+#TODO 将其改为使用Resource
 var can_produce: Dictionary[StringName,float] = {
 	"Copper" : 0 ,
 	"Iron" : 0,
