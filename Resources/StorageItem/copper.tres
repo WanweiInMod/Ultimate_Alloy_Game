@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="storage_item" format=3 uid="uid://dp5wek2if82xg"]
+
+[ext_resource type="Script" uid="uid://ctka1g5mfmus8" path="res://Classes/storage_class.gd" id="1_xm0re"]
+
+[resource]
+script = ExtResource("1_xm0re")
+item_name = &"Copper"
+item_price = 15.0
+metadata/_custom_type_script = "uid://ctka1g5mfmus8"

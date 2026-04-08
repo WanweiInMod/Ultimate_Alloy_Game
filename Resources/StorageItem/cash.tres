@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="storage_item" format=3 uid="uid://ddt3ifc063suw"]
+
+[ext_resource type="Script" uid="uid://ctka1g5mfmus8" path="res://Classes/storage_class.gd" id="1_tmmi5"]
+
+[resource]
+script = ExtResource("1_tmmi5")
+item_name = &"Cash"
+metadata/_custom_type_script = "uid://ctka1g5mfmus8"

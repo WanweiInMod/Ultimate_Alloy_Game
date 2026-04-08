@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="storage_item" format=3 uid="uid://d4htksqjdg2ea"]
+
+[ext_resource type="Script" uid="uid://ctka1g5mfmus8" path="res://Classes/storage_class.gd" id="1_5s1y0"]
+
+[resource]
+script = ExtResource("1_5s1y0")
+item_name = &"Gold"
+item_price = 150.0
+metadata/_custom_type_script = "uid://ctka1g5mfmus8"

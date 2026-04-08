@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="storage_item" format=3 uid="uid://bnsooeeoj3ig"]
+
+[ext_resource type="Script" uid="uid://ctka1g5mfmus8" path="res://Classes/storage_class.gd" id="1_dy5b6"]
+
+[resource]
+script = ExtResource("1_dy5b6")
+item_name = &"Stone"
+metadata/_custom_type_script = "uid://ctka1g5mfmus8"
