@@ -8,15 +8,14 @@
 [ext_resource type="Script" uid="uid://cjg5ufv1vqpuq" path="res://seller_manager.gd" id="5_lquwl"]
 [ext_resource type="Script" uid="uid://b2ycaawsrec86" path="res://miner_manager.gd" id="6_7mycd"]
 
-[node name="Main" type="Node" unique_id=300201737 node_paths=PackedStringArray("ui_mng", "furnace_mng")]
+[node name="Main" type="Node" unique_id=300201737]
 script = ExtResource("1_0xm2m")
-ui_mng = NodePath("UI")
-furnace_mng = NodePath("FurnaceManager")
 
 [node name="UI" parent="." unique_id=1530547122 instance=ExtResource("1_ig7tw")]
 
-[node name="MiningManager" type="Node" parent="." unique_id=537819736]
+[node name="MiningManager" type="Node" parent="." unique_id=537819736 node_paths=PackedStringArray("mining_button")]
 script = ExtResource("3_272bh")
+mining_button = NodePath("MiningButton")
 
 [node name="MiningButton" type="Button" parent="MiningManager" unique_id=236110025]
 anchors_preset = 8
@@ -165,5 +164,3 @@ grow_vertical = 2
 text = "Hire Miner
 count: 0
 cost: 150 cash"
-
-[connection signal="pressed" from="MiningManager/MiningButton" to="." method="_on_button_pressed"]
